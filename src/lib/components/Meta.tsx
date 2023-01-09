@@ -1,4 +1,4 @@
-const APP_NAME = "nextarter-chakra";
+const APP_NAME = "Rick and Morty";
 
 const Meta = () => {
   return (
