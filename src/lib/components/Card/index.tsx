@@ -10,17 +10,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-export type CharacterData = {
-  id: number;
-  name: string;
-  image: string;
-  status: "Alive" | "Dead" | "unknown";
-  gender: "Female" | "Male" | "Genderless" | "unknown";
-  species: string;
-};
+import type { CharacterModel } from "models/Character";
 
 interface CardProps {
-  data: CharacterData;
+  data: CharacterModel;
 }
 
 export function Card({ data }: CardProps) {
