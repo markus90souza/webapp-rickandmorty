@@ -15,6 +15,8 @@ export type CharacterData = {
   name: string;
   image: string;
   status: "Alive" | "Dead" | "unknown";
+  gender: "Female" | "Male" | "Genderless" | "unknown";
+  species: string;
 };
 
 interface CardProps {
@@ -62,15 +64,15 @@ export function Card({ data }: CardProps) {
 
           <Stack direction="row" justify="center" spacing={6}>
             <Stack spacing={0} align="center">
-              <Text fontWeight={600}>23k</Text>
+              <Text fontWeight={600}>Gênero</Text>
               <Text fontSize="sm" color="gray.500">
-                Followers
+                {data.gender}
               </Text>
             </Stack>
             <Stack spacing={0} align="center">
-              <Text fontWeight={600}>23k</Text>
+              <Text fontWeight={600}>Especie</Text>
               <Text fontSize="sm" color="gray.500">
-                Followers
+                {data.species}
               </Text>
             </Stack>
           </Stack>
@@ -86,7 +88,7 @@ export function Card({ data }: CardProps) {
               boxShadow: "lg",
             }}
           >
-            Follow
+            Detalhes
           </Button>
         </Box>
       </Box>
