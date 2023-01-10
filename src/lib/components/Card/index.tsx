@@ -21,6 +21,7 @@ export function Card({ data }: CardProps) {
     <Center py={6}>
       <Box
         maxW="300px"
+        minHeight="auto"
         padding="4"
         w="full"
         bg={useColorModeValue("white", "gray.800")}
@@ -40,7 +41,12 @@ export function Card({ data }: CardProps) {
 
         <Box p={6}>
           <Stack spacing={0} align="center" mb={5}>
-            <Heading fontSize="2xl" fontWeight={500} fontFamily="body">
+            <Heading
+              textTransform="uppercase"
+              fontSize="lg"
+              fontWeight={500}
+              fontFamily="body"
+            >
               {data.name}
             </Heading>
             <Text color="gray.500">
